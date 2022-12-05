@@ -19,7 +19,7 @@
         </nav>
     </header>
 
-    <main>
+    <main class="conteiner-principal">
         <section class="criar-posts">
             <div class="conteiner-post">
                 <img src="./src/assets/img/user1.svg" alt="">
@@ -27,7 +27,7 @@
                 <p>Front end Engineer</p>
                 <input type="text" placeholder="" class="input-title">
                 <input type="text" placeholder="" class="inputi-text">
-                <button>Postar</button>
+                <button type="submit">Postar</button>
             </div>
         </section>
 
@@ -35,22 +35,7 @@
             <div class="conteiner-sugestoes">
                 <h2>Sugestões para você seguir</h2>
                 <div class="sugestoes">
-                    <ul>
-                        <li><img src="./src/assets/img/user3.svg" alt="">
-                            <h2>Carlos Lima</h2>
-                            <p>UX e UL Desginer</p>
-                            <button data-button-aside="button" id="buttonsAside" class="button-seguir">Seguir</button>
-                        </li>
-                        <li><img src="./src/assets/img/user6.svg" alt="">
-                            <h2>Larissa Camargo</h2>
-                            <p>UI Developer</p>
-                            <button data-button-aside="button" id="buttonsAside" class="button-seguir">Seguir</button>
-                        </li>
-                        <li><img src="./src/assets/img/user7.svg" alt="">
-                            <h2>Filipe Gutierry</h2>
-                            <p>Full Stack Developer</p>
-                            <button data-button-aside="button" id="buttonsAside" class="button-seguir">Seguir</button>
-                        </li>
+                    <ul class="ul-sugestoes">
                     </ul>
                 </div>
             </div>
@@ -60,20 +45,16 @@
             <div class="conteiner-posts">
                 <h1>Posts</h1>
                 <ul class="perfils">
-                    <li>
-                        <img src="./src/assets/img/user2.svg" alt="">
-                        <h2>Samuel Persuhn</h2>
-                        <p class="p-profisao">Front end Engineer</p>
-                        <h1>Empresa de Tecnologia da Informação abre vagas para programa de estágio</h1>
-                        <p>A Generic Digital, empresa natalence especializada em Tecnologia da Informação, irá iniciar o seu sexto programa de estágio, com o prazo de inscrições entre os dias 10 e 28 de agosto.</p>
-                        <button>Abrir Post</button>
-                        <span><i class="fa-solid fa-heart"></i>10</span>
-                    </li>
                 </ul>
             </div>
         </section>
         
     </main>
+    <dialog class="modal-conteiner">
+    </dialog>
+    <script src="./src/scripts/posts.js"></script>
+    <script src="./src/scripts/sugestUsers.js"></script>
+    <script src="./src/scripts/users.js"></script>
     <script src="./src/scripts/index.js"></script>
 </body>
 
