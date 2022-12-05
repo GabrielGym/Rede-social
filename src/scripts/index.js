@@ -39,12 +39,12 @@ function ListaDePosts() {
                 let tagLi = document.createElement("li")
                 let tagButton = document.createElement("button")
 
-                tagLi.innerHTML = `<img src="${lista.img}" alt="">
+                tagLi.innerHTML = `<img src="${lista.img}" alt="${lista.user}" class="imgUsuario">
                 <h2>${lista.user}</h2>
                 <p class="p-profisao">${lista.stack}</p>
                 <h1>${postUser.title}</h1>
                 <p class="descrition">${postUser.text}</p>
-                <span><i class="fa-solid fa-heart"></i>10</span>`
+                <button class="button-icon" id="${lista.id}"><img src="./src/assets/img/Captura de tela 2022-12-04 234003.png" alt="" class="img-icon"> 10</button>`
 
                 tagButton.innerText = `Abrir Post`
                 tagButton.classList.add("buttonsPosts")
@@ -58,6 +58,18 @@ function ListaDePosts() {
 }
 ListaDePosts()
 
+function buttonIcon() {
+    let icon = document.querySelectorAll('.button-icon')
+    let elementIconId = {}
+    for (let i = 0; i < icon.length; i++) {
+        elementIconId = icon[i].id
+
+        icon[i].addEventListener("click", () => {
+            icon[i].innerHTML = `<img src="./src/assets/img/Captura de tela 2022-12-04 233851.png" alt="" class="img-icon"> 11`
+        })
+    }
+}
+buttonIcon()
 
 function buttonsHouver() {
     const buttonsAside = document.querySelectorAll("#buttonsAside")
@@ -68,6 +80,7 @@ function buttonsHouver() {
             buttonsAside[i].classList.toggle("button-seguindo")
         })
     }
+
 }
 buttonsHouver()
 
@@ -93,7 +106,7 @@ renderModal()
 
 function createModal(id) {
     let modalConteiner = document.createElement("div")
-    
+
     let element = {}
     let elementposts = {}
 
@@ -103,7 +116,7 @@ function createModal(id) {
         }
 
     }
-    
+
     for (let p = 0; p < posts.length; p++) {
         if (posts[p].user === Number(id)) {
             elementposts = posts[p]
